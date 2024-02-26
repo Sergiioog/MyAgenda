@@ -1,9 +1,10 @@
-import Boton from './ui/boton';
+import Header from './ui/Header';
+import OffCanvas from './ui/OffCanvas';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Boton />
+    <main className="min-h-screen ">
+      <Header />
     </main>
   );
 }
