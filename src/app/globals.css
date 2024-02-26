@@ -38,6 +38,10 @@ main {
 .headerPrincipal {
   background-color: #292727;
 }
+/*OFF CANVAS*/
+.list:hover {
+  color: #393535;
+}
 
 /*-------RESET CSS--------*/
 
