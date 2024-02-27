@@ -51,7 +51,10 @@ main {
   background-color: transparent !important;
 }
 /*-------OFF CANVAS-------*/
-
+/*-------CARRUSEL---------*/
+.estiloCarrusel {
+  font-size: 40px;
+}
 
 /*-------RESET CSS--------*/
 
