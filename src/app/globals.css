@@ -38,9 +38,22 @@ main {
 .headerPrincipal {
   background-color: #292727;
 }
-/*OFF CANVAS*/
+
+/*-------OFF CANVAS-------*/
 .list:hover {
   color: #393535;
+}
+.no-hover-effect { /*Resetea animaciones y hover*/
+  transition: none !important;
+}
+
+.no-hover-effect:hover {
+  background-color: transparent !important;
+}
+/*-------OFF CANVAS-------*/
+/*-------CARRUSEL---------*/
+.estiloCarrusel {
+  font-size: 40px;
 }
 
 /*-------RESET CSS--------*/
