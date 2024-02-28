@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './ui/Header';
 import {ImagesSlider} from './ui/image-slider';
 import Image from 'next/image';
+import Boton from '../app/ui/Button';
 
 export default function Home() {
   
@@ -27,11 +28,23 @@ export default function Home() {
         </div>
       </section>
       <section className="min-h-[60vh] flex justify-start items-center flex-col mt-20 max-w-[90%] ml-auto mr-auto">
-        <h3 className='h3Titulo  text-white animacionAparecer'>¿Que es MyAgenda?</h3>
+        <h3 className='h3Titulo  text-white animacionAparecer text-center'>¿Que es MyAgenda?</h3>
         <div className=' w-full h-auto'>
-          <p className='text-white mt-2 text-lg tracking-tight text-center'>MyAgenda es una aplicación deportiva, pensada para que cualquier usuario de gimnsio
+          <p className='pFont text-white mt-5 tracking-tight text-center'>MyAgenda es una aplicación deportiva, pensada para que cualquier usuario de gimnsio
             pueda registrar su progreso con el fin de ganar masa muscular
           </p>
+          <p className='pFont text-white mt-5 tracking-tight text-center'>Con nuestro novedoso calendario podrás registrar
+          tu actividad y ver tu progeso gracias a nuestro apartado de estadísticas.
+          </p>
+          <div className=' h-auto w-full flex justify-center items-center mt-5'>
+
+            <Boton texto={"Saber más"} 
+                  ancho={100} 
+                  alto={200} 
+                  colorTexto='white'   />
+          
+          </div>
+
         </div>
       </section>
     </main></>
