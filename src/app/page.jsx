@@ -3,9 +3,14 @@ import Header from './ui/Header';
 import {ImagesSlider} from './ui/image-slider';
 import Image from 'next/image';
 import Boton from '../app/ui/Button';
+import { BentoGrid, BentoGridItem } from '../app/ui/bento-grid'; // Importamos BentoGrid y BentoGridItem
+import { IconClipboardCopy,IconFileBroken,IconSignature,IconTableColumn } from "@tabler/icons-react";
+import {CardHover} from '../app/ui/card-hover-effect';
 
 export default function Home() {
-  
+  const Skeleton = () => (
+    <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)] border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
+  );
   return (
     <>
     <main className="min-h-screen">
@@ -37,7 +42,6 @@ export default function Home() {
           tu actividad y ver tu progeso gracias a nuestro apartado de estadísticas.
           </p>
           <div className=' h-auto w-full flex justify-center items-center mt-8'>
-
             <Boton texto={"Saber más"} 
                   ancho={220} 
                   alto={50} 
@@ -46,11 +50,89 @@ export default function Home() {
                   colorFondo='black'
                   colorBorde='white'  
             />
-          
           </div>
-
         </div>
       </section>
+      <section className="min-h-[60vh] flex justify-start items-center flex-col mt-10 max-w-[90%] ml-auto mr-auto">
+        <h3 className='h3Titulo  text-white animacionAparecer text-center'>Nuestras Funciones</h3>
+        <div className=' w-full h-auto mt-16'>
+            <BentoGrid>
+            <BentoGridItem
+            title={
+              <p>The Dawn of Innovation</p>
+            }
+            description="Explore the birth of groundbreaking ideas and inventions."
+            header={
+              <div style={{ position: "relative", width: "100%", height: "100%" , maxWidth:"100%" }}>
+                <Image
+                  src="/assets/fotos/bento1.jpeg"
+                  alt="Imagen 1"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            }
+            className="md:col-span-2"
+            icon={<IconClipboardCopy className="h-4 w-4 text-neutral-500" />}
+          />
+              <BentoGridItem
+                title="The Digital Revolution"
+                description="Dive into the transformative power of technology."
+                header={
+              <div style={{ position: "relative", width: "100%", height: "100%" , maxWidth:"100%" }}>
+                <Image
+                  src="/assets/fotos/bento1.jpeg"
+                  alt="Imagen 1"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            }
+                className="md:col-span-1"
+                icon={<IconFileBroken className="h-4 w-4 text-neutral-500" />}
+              />
+              <BentoGridItem
+                title="The Art of Design"
+                description="Discover the beauty of thoughtful and functional design."
+                header={
+              <div style={{ position: "relative", width: "100%", height: "100%" , maxWidth:"100%" }}>
+                <Image
+                  src="/assets/fotos/bento1.jpeg"
+                  alt="Imagen 1"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            }
+                className="md:col-span-1"
+                icon={<IconSignature className="h-4 w-4 text-neutral-500" />}
+              />
+              <BentoGridItem
+                title="The Power of Communication"
+                description="Understand the impact of effective communication in our lives."
+                header={
+              <div style={{ position: "relative", width: "100%", height: "100%" , maxWidth:"100%" }}>
+                <Image
+                  src="/assets/fotos/bento1.jpeg"
+                  alt="Imagen 1"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            }
+                className="md:col-span-2"
+                icon={<IconTableColumn className="h-4 w-4 text-neutral-500" />}
+              />
+            </BentoGrid>
+        </div>
+      </section>
+      <section className="min-h-[60vh] flex justify-start items-center flex-col mt-20 max-w-[90%] ml-auto mr-auto">
+        <h3 className='h3Titulo  text-white animacionAparecer text-center'>Por qué MyAgenda</h3>
+        <div className=' w-full h-auto mt-16'>
+           {/* <CardHover /> */}
+        </div>
+      </section>
+
     </main></>
   );
 }
