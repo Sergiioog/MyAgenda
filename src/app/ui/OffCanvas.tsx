@@ -20,9 +20,9 @@ const App: React.FC = () => {
   return (
     <>
       <Button onClick={showDrawer} className='w-auto h-auto p-0 border-none bg-transparent no-hover-effect'>
-      <UseAnimations animation={menu2} size={40} fillColor='white' strokeColor='white' />      
+        <UseAnimations animation={menu2} size={40} fillColor='white' strokeColor='white' />      
       </Button>
-      <Drawer onClose={onClose} open={open} footer='true' width={320}>
+      <Drawer onClose={onClose} open={open} footer='MyAgenda © All rights reserved' width={320}>
         <ul> {/* Utilizamos una lista ul para envolver los elementos li */}
           <li className='h-8 mb-4 flex justify-start items-center  '>
             <Image src={'../assets/iconos/inicio.svg'} alt='Inicio' className='hover:cursor-pointer' width={29} height={28} />

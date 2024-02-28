@@ -2,9 +2,15 @@ import React from 'react';
 import Header from './ui/Header';
 import {ImagesSlider} from './ui/image-slider';
 import Image from 'next/image';
+import Boton from '../app/ui/Button';
+import { BentoGrid, BentoGridItem } from '../app/ui/bento-grid'; // Importamos BentoGrid y BentoGridItem
+import { IconClipboardCopy,IconFileBroken,IconSignature,IconTableColumn } from "@tabler/icons-react";
+import {CardHover} from '../app/ui/card-hover-effect';
 
 export default function Home() {
-  
+  const Skeleton = () => (
+    <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)] border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
+  );
   return (
     <>
     <main className="min-h-screen">
@@ -27,13 +33,106 @@ export default function Home() {
         </div>
       </section>
       <section className="min-h-[60vh] flex justify-start items-center flex-col mt-20 max-w-[90%] ml-auto mr-auto">
-        <h3 className='h3Titulo  text-white animacionAparecer'>¿Que es MyAgenda?</h3>
+        <h3 className='h3Titulo  text-white animacionAparecer text-center'>¿Que es MyAgenda?</h3>
         <div className=' w-full h-auto'>
-          <p className='text-white mt-2 text-lg tracking-tight text-center'>MyAgenda es una aplicación deportiva, pensada para que cualquier usuario de gimnsio
+          <p className='pFont text-white mt-6 tracking-tight text-center'>MyAgenda es una aplicación deportiva, pensada para que cualquier usuario de gimnsio
             pueda registrar su progreso con el fin de ganar masa muscular
           </p>
+          <p className='pFont text-white mt-8 tracking-tight text-center'>Con nuestro novedoso calendario podrás registrar
+          tu actividad y ver tu progeso gracias a nuestro apartado de estadísticas.
+          </p>
+          <div className=' h-auto w-full flex justify-center items-center mt-8'>
+            <Boton texto={"Saber más"} 
+                  ancho={220} 
+                  alto={50} 
+                  borderRadius={10}
+                  colorTexto='white'
+                  colorFondo='black'
+                  colorBorde='white'  
+            />
+          </div>
         </div>
       </section>
+      <section className="min-h-[60vh] flex justify-start items-center flex-col mt-10 max-w-[90%] ml-auto mr-auto">
+        <h3 className='h3Titulo  text-white animacionAparecer text-center'>Nuestras Funciones</h3>
+        <div className=' w-full h-auto mt-16'>
+            <BentoGrid>
+            <BentoGridItem
+            title="Agenda para guardar tus resultados"
+            description="Con nuestra agenda llevaras un registro controlado de tus actividades físicas que te ayudarán a conseguir
+            tus objetivos"
+            header={
+              <div style={{ position: "relative", width: "100%", height: "100%" , maxWidth:"100%" }}>
+                <Image
+                  src="/assets/fotos/bento1.jpeg"
+                  alt="Imagen 1"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            }
+            className="md:col-span-2"
+            icon={<IconClipboardCopy className="h-4 w-4 text-neutral-500" />}
+          />
+              <BentoGridItem
+                title="Plan de ejercicios"
+                description="Encontrarás un gran catálogo de tutoriales de ejercicios"
+                header={
+              <div style={{ position: "relative", width: "100%", height: "100%" , maxWidth:"100%" }}>
+                <Image
+                  src="/assets/fotos/bento1.jpeg"
+                  alt="Imagen 1"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            }
+                className="md:col-span-1"
+                icon={<IconFileBroken className="h-4 w-4 text-neutral-500" />}
+              />
+              <BentoGridItem
+                title="Plan de estiramientos"
+                description="Encontrarás un gran catálogo de tutoriales de estiramientos"
+                header={
+              <div style={{ position: "relative", width: "100%", height: "100%" , maxWidth:"100%" }}>
+                <Image
+                  src="/assets/fotos/bento1.jpeg"
+                  alt="Imagen 1"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            }
+                className="md:col-span-1"
+                icon={<IconSignature className="h-4 w-4 text-neutral-500" />}
+              />
+              <BentoGridItem
+                title="Estadísticas del usuario"
+                description="A medida que vayas completando registros, se generarán estadísticas
+                automáticamente que te ayudarán a conseguir tu objetivo."
+                header={
+              <div style={{ position: "relative", width: "100%", height: "100%" , maxWidth:"100%" }}>
+                <Image
+                  src="/assets/fotos/bento1.jpeg"
+                  alt="Imagen 1"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            }
+                className="md:col-span-2"
+                icon={<IconTableColumn className="h-4 w-4 text-neutral-500" />}
+              />
+            </BentoGrid>
+        </div>
+      </section>
+      <section className="min-h-[60vh] flex justify-start items-center flex-col mt-20 max-w-[90%] ml-auto mr-auto">
+        <h3 className='h3Titulo  text-white animacionAparecer text-center'>Por qué MyAgenda</h3>
+        <div className=' w-full h-auto mt-16'>
+           {/* <CardHover /> */}
+        </div>
+      </section>
+
     </main></>
   );
 }

@@ -67,9 +67,13 @@ main {
   color: #ffffff; /* Color del texto */
 }
 .h3Titulo {
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 35px;
+  font-weight: 600;
   letter-spacing: -2.2px;
+}
+.pFont {
+  font-size: 20px;
+  font-weight: 500;
 
 }
 /*-------CARRUSEL---------*/
