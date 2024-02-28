@@ -55,6 +55,48 @@ main {
 .estiloCarrusel {
   font-size: 40px;
 }
+.h1Titulo {
+  font-size: 50px; /* Tamaño del texto */
+  font-weight: bold; /* Peso de la fuente */
+  letter-spacing: -2px; /* Espaciado entre letras */
+}
+.h2Titulo {
+  font-size: 30px; /* Tamaño del texto */
+  font-weight: 500;
+  letter-spacing: -1.5px;
+  color: #ffffff; /* Color del texto */
+}
+.h3Titulo {
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -2.2px;
+
+}
+/*-------CARRUSEL---------*/
+/*-------ANIMACIONES------*/
+@keyframes aparecer {
+  from {
+      opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+.animacionAparecer {
+  animation: aparecer 0.5s ease-out
+}
+
+
+
+
+
+
+/*-------ANIMACIONES------*/
+
+
+
+
+
+
 
 /*-------RESET CSS--------*/
 
