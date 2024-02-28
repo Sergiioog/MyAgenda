@@ -58,10 +58,9 @@ export default function Home() {
         <div className=' w-full h-auto mt-16'>
             <BentoGrid>
             <BentoGridItem
-            title={
-              <p>The Dawn of Innovation</p>
-            }
-            description="Explore the birth of groundbreaking ideas and inventions."
+            title="Agenda para guardar tus resultados"
+            description="Con nuestra agenda llevaras un registro controlado de tus actividades físicas que te ayudarán a conseguir
+            tus objetivos"
             header={
               <div style={{ position: "relative", width: "100%", height: "100%" , maxWidth:"100%" }}>
                 <Image
@@ -76,8 +75,8 @@ export default function Home() {
             icon={<IconClipboardCopy className="h-4 w-4 text-neutral-500" />}
           />
               <BentoGridItem
-                title="The Digital Revolution"
-                description="Dive into the transformative power of technology."
+                title="Plan de ejercicios"
+                description="Encontrarás un gran catálogo de tutoriales de ejercicios"
                 header={
               <div style={{ position: "relative", width: "100%", height: "100%" , maxWidth:"100%" }}>
                 <Image
@@ -92,8 +91,8 @@ export default function Home() {
                 icon={<IconFileBroken className="h-4 w-4 text-neutral-500" />}
               />
               <BentoGridItem
-                title="The Art of Design"
-                description="Discover the beauty of thoughtful and functional design."
+                title="Plan de estiramientos"
+                description="Encontrarás un gran catálogo de tutoriales de estiramientos"
                 header={
               <div style={{ position: "relative", width: "100%", height: "100%" , maxWidth:"100%" }}>
                 <Image
@@ -108,8 +107,9 @@ export default function Home() {
                 icon={<IconSignature className="h-4 w-4 text-neutral-500" />}
               />
               <BentoGridItem
-                title="The Power of Communication"
-                description="Understand the impact of effective communication in our lives."
+                title="Estadísticas del usuario"
+                description="A medida que vayas completando registros, se generarán estadísticas
+                automáticamente que te ayudarán a conseguir tu objetivo."
                 header={
               <div style={{ position: "relative", width: "100%", height: "100%" , maxWidth:"100%" }}>
                 <Image
