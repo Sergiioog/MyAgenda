@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Boton from '../app/ui/Button';
 import { BentoGrid, BentoGridItem } from '../app/ui/bento-grid'; // Importamos BentoGrid y BentoGridItem
 import { IconClipboardCopy,IconFileBroken,IconSignature,IconTableColumn } from "@tabler/icons-react";
-import {CardHover} from '../app/ui/card-hover-effect';
+import {InfiniteMovingCards} from '../app/ui/infinite-moving-cards'
 
 export default function Home() {
   const Skeleton = () => (
@@ -129,7 +129,39 @@ export default function Home() {
       <section className="min-h-[60vh] flex justify-start items-center flex-col mt-20 max-w-[90%] ml-auto mr-auto">
         <h3 className='h3Titulo  text-white animacionAparecer text-center'>Por qué MyAgenda</h3>
         <div className=' w-full h-auto mt-16'>
-           {/* <CardHover /> */}
+           <InfiniteMovingCards
+             items={[
+              { 
+                quote: "Me encanta esta aplicación, me motiva a hacer ejercicio todos los días y llevar un registro de mi progreso.", 
+                name: "Ana", 
+                title: "Usuario feliz" 
+              },
+              { 
+                quote: "La aplicación tiene una gran variedad de rutinas de ejercicio para todos los niveles, ¡la recomiendo totalmente!", 
+                name: "Juan", 
+                title: "Entusiasta del fitness" 
+              },
+              { 
+                quote: "Es genial poder ver mis estadísticas de ejercicio y ver cómo he mejorado con el tiempo, definitivamente ha cambiado mi vida.", 
+                name: "María", 
+                title: "Adicta al gimnasio" 
+              },
+              { 
+                quote: "Esta aplicación me ha ayudado a mantenerme en forma sin necesidad de ir al gimnasio, ¡es como tener un entrenador personal en mi bolsillo!", 
+                name: "Pedro", 
+                title: "Entrenamiento en casa" 
+              },
+              { 
+                quote: "Nunca fui fanático del ejercicio, pero con esta aplicación ha sido mucho más fácil mantenerme motivado y comprometido con mi salud.", 
+                name: "Luisa", 
+                title: "Principiante en fitness" 
+              }
+            ]}
+            direction="right"
+            speed='slow'
+            pauseOnHover={true}
+           />
+           
         </div>
       </section>
 
